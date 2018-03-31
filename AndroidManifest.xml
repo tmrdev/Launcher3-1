@@ -51,10 +51,10 @@
 
     <!-- Pixel -->
     <permission
-        android:name="com.google.android.apps.nexuslauncher.permission.QSB"
+        android:name="com.google.android.apps.zenexuslauncher.permission.QSB"
         android:permissionGroup="android.permission-group.SYSTEM_TOOLS"
         android:protectionLevel="signatureOrSystem"/>
-    <uses-permission android:name="com.google.android.apps.nexuslauncher.permission.QSB" />
+    <uses-permission android:name="com.google.android.apps.zenexuslauncher.permission.QSB" />
 
     <!-- Custom -->
     <uses-permission android:name="android.permission.EXPAND_STATUS_BAR" />
@@ -117,7 +117,7 @@
         -->
         <provider
             android:name="com.android.launcher3.LauncherProvider"
-            android:authorities="com.google.android.apps.nexuslauncher.settings"
+            android:authorities="com.google.android.apps.zenexuslauncher.settings"
             android:exported="true"
             android:writePermission="com.google.android.apps.nexuslauncher.permission.WRITE_SETTINGS"
             android:readPermission="com.google.android.apps.nexuslauncher.permission.READ_SETTINGS" />
