@@ -32,13 +32,13 @@
     name in the permissions. eq com.mypackage.permission.READ_SETTINGS
     -->
     <permission
-        android:name="com.google.android.apps.nexuslauncher.permission.READ_SETTINGS"
+        android:name="com.google.android.apps.zenexuslauncher.permission.READ_SETTINGS"
         android:permissionGroup="android.permission-group.SYSTEM_TOOLS"
         android:protectionLevel="normal"
         android:label="@string/permlab_read_settings"
         android:description="@string/permdesc_read_settings"/>
     <permission
-        android:name="com.google.android.apps.nexuslauncher.permission.WRITE_SETTINGS"
+        android:name="com.google.android.apps.zenexuslauncher.permission.WRITE_SETTINGS"
         android:permissionGroup="android.permission-group.SYSTEM_TOOLS"
         android:protectionLevel="signatureOrSystem"
         android:label="@string/permlab_write_settings"
@@ -46,15 +46,15 @@
 
     <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
     <uses-permission android:name="com.android.launcher.permission.WRITE_SETTINGS" />
-    <uses-permission android:name="com.google.android.apps.nexuslauncher.permission.READ_SETTINGS" />
-    <uses-permission android:name="com.google.android.apps.nexuslauncher.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="com.google.android.apps.zenexuslauncher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.google.android.apps.zenexuslauncher.permission.WRITE_SETTINGS" />
 
     <!-- Pixel -->
     <permission
-        android:name="com.google.android.apps.nexuslauncher.permission.QSB"
+        android:name="com.google.android.apps.zenexuslauncher.permission.QSB"
         android:permissionGroup="android.permission-group.SYSTEM_TOOLS"
         android:protectionLevel="signatureOrSystem"/>
-    <uses-permission android:name="com.google.android.apps.nexuslauncher.permission.QSB" />
+    <uses-permission android:name="com.google.android.apps.zenexuslauncher.permission.QSB" />
 
     <!-- Custom -->
     <uses-permission android:name="android.permission.EXPAND_STATUS_BAR" />
@@ -76,7 +76,7 @@
         attributes and intent filters the same
         -->
         <activity
-            android:name="com.google.android.apps.nexuslauncher.NexusLauncherActivity"
+            android:name="com.google.android.apps.zenexuslauncher.NexusLauncherActivity"
             android:launchMode="singleTask"
             android:clearTaskOnLaunch="true"
             android:stateNotNeeded="true"
@@ -100,7 +100,7 @@
         The settings activity. When extending keep the intent filter present
         -->
         <activity
-            android:name="com.google.android.apps.nexuslauncher.SettingsActivity"
+            android:name="com.google.android.apps.zenexuslauncher.SettingsActivity"
             android:label="@string/settings_button_text"
             android:theme="@style/SettingsTheme"
             android:autoRemoveFromRecents="true">
@@ -117,35 +117,35 @@
         -->
         <provider
             android:name="com.android.launcher3.LauncherProvider"
-            android:authorities="com.google.android.apps.nexuslauncher.settings"
+            android:authorities="com.google.android.apps.zenexuslauncher.settings"
             android:exported="true"
-            android:writePermission="com.google.android.apps.nexuslauncher.permission.WRITE_SETTINGS"
-            android:readPermission="com.google.android.apps.nexuslauncher.permission.READ_SETTINGS" />
+            android:writePermission="com.google.android.apps.zenexuslauncher.permission.WRITE_SETTINGS"
+            android:readPermission="com.google.android.apps.zenexuslauncher.permission.READ_SETTINGS" />
 
         <!--
         Pixel
         -->
         <activity
-            android:name="com.google.android.apps.nexuslauncher.search.AppLaunchActivity"
+            android:name="com.google.android.apps.zenexuslauncher.search.AppLaunchActivity"
             android:theme="@android:style/Theme.NoDisplay">
             <intent-filter android:priority="1">
-                <action android:name="com.google.android.apps.nexuslauncher.search.APP_LAUNCH"/>
+                <action android:name="com.google.android.apps.zenexuslauncher.search.APP_LAUNCH"/>
                 <category android:name="android.intent.category.DEFAULT"/>
                 <data
                     android:mimeType="vnd.android.cursor.dir/vnd.android.search.suggest"
                     android:scheme="content"/>
             </intent-filter>
         </activity>
-        <receiver android:name="com.google.android.apps.nexuslauncher.smartspace.SmartspaceBroadcastReceiver">
+        <receiver android:name="com.google.android.apps.zenexuslauncher.smartspace.SmartspaceBroadcastReceiver">
             <intent-filter>
-                <action android:name="com.google.android.apps.nexuslauncher.UPDATE_SMARTSPACE" />
+                <action android:name="com.google.android.apps.zenexuslauncher.UPDATE_SMARTSPACE" />
             </intent-filter>
         </receiver>
-        <receiver android:name="com.google.android.apps.nexuslauncher.qsb.LongClickReceiver" />
+        <receiver android:name="com.google.android.apps.zenexuslauncher.qsb.LongClickReceiver" />
         <provider
-            android:authorities="com.google.android.apps.nexuslauncher.appssearch"
+            android:authorities="com.google.android.apps.zenexuslauncher.appssearch"
             android:exported="true"
-            android:name="com.google.android.apps.nexuslauncher.search.AppSearchProvider" />
+            android:name="com.google.android.apps.zenexuslauncher.search.AppSearchProvider" />
 
         <!-- ENABLE_FOR_TESTING
 

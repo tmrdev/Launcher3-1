@@ -17,6 +17,8 @@ android {
     compileSdkVersion 27
     buildToolsVersion '26.0.2'
 
+    defaultConfig.applicationId = "com.google.android.apps.zenexuslauncher"
+
     defaultConfig {
         minSdkVersion 21
         targetSdkVersion 27
@@ -40,7 +42,7 @@ android {
 
     productFlavors {
         aosp {
-            applicationId 'com.google.android.apps.nexuslauncher'
+            applicationId 'com.google.android.apps.zenexuslauncher'
             testApplicationId 'com.android.launcher3.tests'
         }
 
@@ -128,8 +130,8 @@ protobuf {
                         option "java_package=launcher_log_extension.proto|com.android.launcher3.userevent.nano"
                         option "java_package=launcher_log.proto|com.android.launcher3.userevent.nano"
                         option "java_package=launcher_dump.proto|com.android.launcher3.model.nano"
-                        option "java_package=search.proto|com.google.android.apps.nexuslauncher.search.nano"
-                        option "java_package=smartspace.proto|com.google.android.apps.nexuslauncher.smartspace.nano"
+                        option "java_package=search.proto|com.google.android.apps.zenexuslauncher.search.nano"
+                        option "java_package=smartspace.proto|com.google.android.apps.zenexuslauncher.smartspace.nano"
                         option "enum_style=java"
                     }
                 }

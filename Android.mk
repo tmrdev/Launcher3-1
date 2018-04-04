@@ -49,7 +49,7 @@ LOCAL_PROTOC_FLAGS := --proto_path=$(LOCAL_PATH)/protos/ --proto_path=$(LOCAL_PA
 LOCAL_PROTO_JAVA_OUTPUT_PARAMS := enum_style=java
 
 LOCAL_AAPT_FLAGS := \
-    --rename-manifest-package com.google.android.apps.nexuslauncher \
+    --rename-manifest-package com.google.android.apps.zenexuslauncher \
     --auto-add-overlay \
     --extra-packages android.support.v7.recyclerview \
 
