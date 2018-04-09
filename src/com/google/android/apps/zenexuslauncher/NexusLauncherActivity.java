@@ -35,6 +35,7 @@ public class NexusLauncherActivity extends Launcher {
             getWorkspace().setCurrentPage(0);
             showOverviewMode(false);
         }
+
     }
 
     @Override

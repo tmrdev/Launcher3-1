@@ -102,7 +102,7 @@
             android:persistent="false">
             <intent
                 android:action="android.settings.APPLICATION_DETAILS_SETTINGS"
-                android:data="package:com.google.android.apps.zenexuslauncher" />
+                android:data="package:${applicationId}" />
         </Preference>
 
     </PreferenceScreen>

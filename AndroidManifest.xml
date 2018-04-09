@@ -19,6 +19,7 @@
 -->
 <manifest
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.android.launcher3">
     <uses-sdk android:targetSdkVersion="23" android:minSdkVersion="21"/>
     <!--
@@ -32,7 +33,7 @@
     name in the permissions. eq com.mypackage.permission.READ_SETTINGS
     -->
     <permission
-        android:name="com.google.android.apps.zenexuslauncher.permission.READ_SETTINGS"
+        android:name="${applicationId}.permission.READ_SETTINGS"
         android:permissionGroup="android.permission-group.SYSTEM_TOOLS"
         android:protectionLevel="normal"
         android:label="@string/permlab_read_settings"
@@ -46,15 +47,15 @@
 
     <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
     <uses-permission android:name="com.android.launcher.permission.WRITE_SETTINGS" />
-    <uses-permission android:name="com.google.android.apps.zenexuslauncher.permission.READ_SETTINGS" />
-    <uses-permission android:name="com.google.android.apps.zenexuslauncher.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="${applicationId}.permission.READ_SETTINGS" />
+    <uses-permission android:name="${applicationId}.permission.WRITE_SETTINGS" />
 
     <!-- Pixel -->
     <permission
         android:name="com.google.android.apps.zenexuslauncher.permission.QSB"
         android:permissionGroup="android.permission-group.SYSTEM_TOOLS"
         android:protectionLevel="signatureOrSystem"/>
-    <uses-permission android:name="com.google.android.apps.zenexuslauncher.permission.QSB" />
+    <uses-permission android:name="${applicationId}.permission.QSB" />
 
     <!-- Custom -->
     <uses-permission android:name="android.permission.EXPAND_STATUS_BAR" />
@@ -69,7 +70,8 @@
         android:theme="@style/LauncherTheme"
         android:largeHeap="@bool/config_largeHeap"
         android:restoreAnyVersion="true"
-        android:supportsRtl="true" >
+        android:supportsRtl="true"
+        tools:ignore="ManifestResource">
 
         <!--
         Main launcher activity. When extending only change the name, and keep all the
@@ -117,7 +119,7 @@
         -->
         <provider
             android:name="com.android.launcher3.LauncherProvider"
-            android:authorities="com.google.android.apps.zenexuslauncher.settings"
+            android:authorities="${applicationId}.settings"
             android:exported="true"
             android:writePermission="com.google.android.apps.zenexuslauncher.permission.WRITE_SETTINGS"
             android:readPermission="com.google.android.apps.zenexuslauncher.permission.READ_SETTINGS" />
@@ -129,7 +131,7 @@
             android:name="com.google.android.apps.zenexuslauncher.search.AppLaunchActivity"
             android:theme="@android:style/Theme.NoDisplay">
             <intent-filter android:priority="1">
-                <action android:name="com.google.android.apps.zenexuslauncher.search.APP_LAUNCH"/>
+                <action android:name="${applicationId}.search.APP_LAUNCH"/>
                 <category android:name="android.intent.category.DEFAULT"/>
                 <data
                     android:mimeType="vnd.android.cursor.dir/vnd.android.search.suggest"
@@ -138,12 +140,12 @@
         </activity>
         <receiver android:name="com.google.android.apps.zenexuslauncher.smartspace.SmartspaceBroadcastReceiver">
             <intent-filter>
-                <action android:name="com.google.android.apps.zenexuslauncher.UPDATE_SMARTSPACE" />
+                <action android:name="${applicationId}.UPDATE_SMARTSPACE" />
             </intent-filter>
         </receiver>
         <receiver android:name="com.google.android.apps.zenexuslauncher.qsb.LongClickReceiver" />
         <provider
-            android:authorities="com.google.android.apps.zenexuslauncher.appssearch"
+            android:authorities="${applicationId}.appssearch"
             android:exported="true"
             android:name="com.google.android.apps.zenexuslauncher.search.AppSearchProvider" />
 

@@ -24,8 +24,9 @@ android {
         targetSdkVersion 27
         versionCode 1
         versionName "3.2"
-
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        manifestPlaceholders = [hostName:"www.example.com"]
     }
     buildTypes {
         debug {
